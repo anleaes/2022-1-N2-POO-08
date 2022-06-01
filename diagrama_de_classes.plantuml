@@ -1,0 +1,54 @@
+@startuml diagramadeclassesn2
+
+title Diagrama de Classes N2
+
+class Museu{
+    - nome: String
+    - id_museu: Integer
+    - endereco: String
+    - telefone: String
+}
+
+class Ingresso{
+    - id_ingresso: Integer
+    - data: String
+    - pessoaclientevisitante: PessoaClienteVisitante
+    
+}
+
+class PessoaGerente{
+    - nome: String
+    - id_func: String
+    - pessoafuncionario: PessoaFuncionario
+}
+
+class PessoaFuncionario{
+    - nome: String
+    - id_func: String
+}
+
+class PessoaClienteVisitante{
+    - cpf: String
+}
+
+class PessoaClienteComprador{
+    - cpf: String
+    - nome: String
+    - tipo_transacao: String
+    - obradearte: ObradeArte
+}
+
+class PessoaFornecedorObra{
+    - cpf: String
+    - nome: String
+    - tipo_transacao: String
+    - obradearte: ObradeArte
+}
+
+class ObradeArte{
+    - nome_obra: String
+    - preco_obra: Integer
+    - artista: String
+}
+
+@enduml
